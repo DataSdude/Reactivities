@@ -13,7 +13,13 @@ builder.Services.AddDbContext<DataContext>(opt =>
     opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
 }
 );
-
+builder.Services.AddCors(opt =>
+{
+    opt.AddPolicy("CorsPolicy", policy =>
+    {
+        policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:3000");
+    });
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -25,6 +31,8 @@ if (app.Environment.IsDevelopment())
 
 // Since we're not using HTTPS, we don't need the next line
 //app.UseHttpsRedirection();
+
+app.UseCors("CorsPolicy");
 
 app.UseAuthorization();
 
@@ -44,7 +52,3 @@ catch(Exception ex)
     logger.LogError(ex, "An error occure during migration");
 }
 app.Run();
-//record weatherforecast(dateonly date, int temperaturec, string? summary)
-//{
-//    public int temperaturef => 32 + (int)(temperaturec / 0.5556);
-//}
