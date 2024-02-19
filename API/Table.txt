@@ -1,0 +1,626 @@
+Vented Window Schedule      
+Type Type
+Mark Window size  Count Type
+Comments 
+  Width Height   
+Slder wi h Tri 1 4' 0" 4' 0" 2  
+Slder wi h Tri 2 4' 0" 3' 0" 1  
+Slder wi h Tri 3 5' 0" 4' 0" 2  
+Slder wi h Tri 4 2' 0" 2' 6" 1  
+Fi ed 5 1' 6" 1' 6" 2  
+Casement wi h Tri 6 3' 0" 4' 0" 1  
+Casement wi h Tri 8 3' 0" 3' 6" 2  
+Slder wi h Tri 9 1' 6" 2' 0" 1 OB/ EMPERED 
+Grand total 12      
+Door Schedule     
+Type Mark Width Height Comme
+nts 
+Si gl -Panel 2 1 3' 0" 7' 0"  
+Si gl -Decorati e 2 2 3' 0" 6' 8"  
+Si gl -Panel 2 3 3' 0" 6' 8"  
+Si gl -Panel 2 4 3' 0" 6' 8"  
+Si gl -Fl sh 5 2' 8" 6' 8"  
+Si gl -Panel 2 6 2' 6" 6' 8"  
+Si gl -Fl sh 7 2' 8" 6' 8"  
+Si gl -Fl sh 8 2' 6" 6' 8"  
+Sldi g-Cl set 9 4' 0" 6' 8"  
+Si gl -Panel 2 10 3' 0" 6' 8"  
+Si gl -Panel 2 11 3' 0" 6' 8"  
+Si gl -Panel 2 12 2' 0" 6' 8"  
+Si gl -Panel 2 13 3' 0" 6' 8"  
+Si gl -Panel 2 14 3' 0" 6' 8"  
+Si gl -Panel 2 15 2' 6" 6' 8"  
+Sldi g-Cl set 16 5' 0" 5' 6"  
+Sldi g-Cl set 17 5' 0" 5' 6"  
+Sldi g-Cl set 18 5' 0" 5' 6"  
+3' 11 1/ " 9
+4' 11 1/ " 8
+3' 11" 
+                    11'-8 3/4"
+6'-9"
+1          
+      15' 2" 6' 11" 5' 11"                        
+      7' 1" 11' 8"           9' 3"             
+      11' 1" 2  ELECT.
+PANEL
+ICE
+MKR
+REF
+2' 0 1/ " 2' 0 1/     TOTAL SQ
+FEET: 32 UARE
+2
+10"X10" VENT
+"  HB
+MAKEUP AIR             
+                 2 X 6
+BATHR
+LAUN             
+                              
+  16'-3 3/8"
+3        DW
+7'-3 3/4"         4'-3"
+2'-6"
+OOM
+DRY 4
+5' 6"     10'-0"      
+                              
+               4'-6 1/2"
+3'-2 3/4"2 X 6
+2' 10 1/ "
+3
+3'-11 1/2"3' 11 1/               
+          3'-3"
+" 3' 4 1/ "                    
+                              
+                              
+  5500
+F CFM
+KITCHEN
+914 SQUARE FEET
+ 1ST FLOOR
+LIVING ROOM        3'-7" 7 5
+PANTRYSTOR
+OKE/ O DETECTORS
+ W/BATTERY BACKUP
+4                   
+          ALL SM
+LINKED
+7'-7"                    
+               W D
+6
+3'-4 1/2" S / P2 x 62 x 6
+3' 6 1/ " VENT
+8"
+H
+3'-4 1/2"
+S / P
+OOM 1               
+                              
+  10'-2 3/4"             AND RAI
+W/ AN          A302
+2'-4 1/2"     
+  BEDR                            
+                              
+    3                          
+415 Olympia Ave NEOlympia, WA 98501(360) 956-3456 phone(360) 956-3415 fax  
+UND
+SOUTH PUGET SOCOMMUNITY COLLEGE2011 Mottman Road SWOlympia, WA 98512-6292(360) 754-7711www.spscc.ctc.edu
+3-D Modeling / Construction Documents:These plans and details where created by CAD / BIMTechnology students, staff and faculty volunteers fromSouth Puget Sound Community College.  
+Preliminary
+STATUS:
+HFH 4BDRM
+PROJECT:HOUSE37th Ave SE Lacey Wa 98503PROJECT #:  
+  
+                11'-6 3/4"
+6'-9"
+1
+A302           
+    13' 10 1/ " 8' 3" 5' 9"                       
+    11' 3 1/ "     6' 4 1/ "     10' 2 1/ "             
+    EG
+BEDROOM 2
+11' 4 1/ "  6
+RESS
+2' 5  1/ " BATH
+14
+3' 11 1/ "  9  2
+2
+156' 8"
+A  2 X 6
+STORAGE
+2X30
+ATTI 3' 6 1/ "
+CCESS             
+                            
+           8'-4 3/4"
+ROOM
+3'-4"                
+  13'-3 3/4"                   13'-5"      
+  13
+16
+LI
+S / P 12
+S / P
+11
+17
+10
+10' 4 1/ "
+BEDROOM 3
+906 SQUARE FEET
+2ND FLOOR
+EGRESS EGRE
+8 8
+11' 3 1/ " 5' 3 3/ "         MA
+M
+3'-4 1/2"
+S / P
+18
+BEDROOM 4
+14' 2"    X. RISE 7 3/ "
+IN. RUN 10"
+HAND      3'-4"      
+  2'-4 1/2"                         
+                   5        
+           3'-4 1/2"
+2'-4 1/2"
+SS                
+  2'-4 1/2"                         
+           RAI        5   2'-4 1/2"     
+                           
+                           
+                     15'-1"      
+                           
+                           
+   13' 10"                        
+   28' 4 1/ "                        
+HB 1
+TOTAL SQU
+FEET: 84
+6' 6" 6' 10"   EGRESS
+1
+9' 2"   
+      
+   1   
+   ARE   
+      
+      
+     5' 6" 
+15' 2"    12' 10"  
+   28' 0"   
+      
+      
+   4   
+   A302   
+      
+REVISIONS
+# DESCRIPTION DATE 
+SHEET SCALE:
+ 1/4" = 1'-0" 
+6/18/ 013 11:18:47 AM 
+SHEET TITLE:
+FLOOR PLANS
+A101 
+415 Olympia Ave NEOlympia, WA 98501360) 956-3456 phone( 360) 956-3415 fax(  
+UND
+SOUTH PUGET SOCOMMUNITY COLLEGE2011 Mottman Road SWOlympia, WA 98512-6292(360) 754-7711www.spscc.ctc.edu
+3-D Modeling / Construction Documents:These plans and details where created by CAD / BIMTechnology students, staff and faculty volunteers fromSouth Puget Sound Community College.  
+Preliminary
+STATUS:
+HFH 4BDRM
+PROJECT:HOUSE37th Ave SE Lacey Wa 98503PROJECT #:  
+  
+        2'-0"  
+14' 8 1/ " 12' 1 3/ " 5' 2 1/ "          
+CONTINUOUS GUTTERS TYP.     7' 8 1/ "
+4X4 P.T. POSTS TYP.     
+          
+   2' 0" GABLE AND EVE OVERHANG TYP.
+OPEN SOFFI
+ YEAR ARCHITECTURAL GRADE  ROOFING TYP.
+CONTI UOUS RI GE VENT TYP.
+4X8 PORCH BEAM TYP.
+13' 8 1/ "
+18' 1 3/ "       
+          
+   30
+"       
+          
+         42'-0" 
+          
+4' 1 1/          
+         2'-0" 
+          
+      9' 9 1/ "    
+ 32' 0"         
+               2'-0"
+4'-0"  
+  2' 0" 13' 0" 11' 6" 3' 6" 2' 0"               
+   14' 10 3/ "   7' 8 1/ "       5' 4 3/ "    
+   2X4 LOOKOUTS @ 48"MAX O.C. TYP.
+MANUFACTURED SCISSOR TRUSSES @ 24" O.C. TY
+MANUFACTURED TRUSSES @
+PORCH ROOF
+4' 3 3/ " 13' 8 1/ "   MA
+P.
+ 24" O. PORCH ROOF
+NUFACTURED TRUSSES @ 24" O.C
+C. TYP.          
+                 
+   . TYP.
+4X8 BEAM TYP.
+4X4 P.T. POST TYP.              
+36'-0" 2'-0"               32'-0" 
+ 2X12 BLOCKING BETWEEN TRUSS
+@ EXTERIOR WALL
+2X4 VENTED BIRD BLOCKI G
+BETWEEN EACH TRUSS
+5/ X8 PRIMED SPRUCE
+FASCI  TYP.
+32'-0"                
+ 2'-0"                
+                6'-0"
+2'-0" 
+                 
+                 
+          9' 11 3/ "       
+   2' 5" 17' 6"      8' 1"       
+  32' 0"               
+REVISIONS
+# DESCRIPTION DATE 
+SHEET SCALE:
+ 1/4" = 1'-0" 
+6/18/ 013 11:18:48 AM 
+SHEET TITLE:
+ROOF PLANS
+A106 
+  
+  
+     
+     
+   
+ T.O.W. 1st FLR 
+415 Olympia Ave NEOlympia, WA 98501(360) 956-3456 phone(360) 956-3415 fax  
+UND
+SOUTH PUGET SOCOMMUNITY COLLEGE2011 Mottman Road SWOlympia, WA 98512-6292(360) 754-7711www.spscc.ctc.edu
+3-D Modeling / Construction Documents:These plans and details where created by CAD / BIMTechnology students, staff and faculty volunteers fromSouth Puget Sound Community College.  
+Preliminary
+STATUS:
+HFH 4BDRM
+PROJECT:HOUSE37th Ave SE Lacey Wa 98503PROJECT #:  
+  
+REVISIONS
+# DESCRIPTION DATE 
+SHEET SCALE:
+ 1/4" = 1'-0" 
+6/18/ 013 11:18:50 AM 
+SHEET TITLE:
+ELEVATIONS
+A201 
+    
+    
+  
+  
+R  
+ 
+ 
+ 
+   
+   
+   
+   
+   
+  
+  
+  
+   
+   
+   
+   
+   
+   
+   
+   
+  
+  
+  
+  
+  
+415 Olympia Ave NEOlympia, WA 98501(360) 956-3456 phone(360) 956-3415 fax  
+UND
+SOUTH PUGET SOCOMMUNITY COLLEGE2011 Mottman Road SWOlympia, WA 98512-6292360) 754-7711( www.spscc.ctc.edu
+3-D Modeling / Construction Documents:These plans and details where created by CAD / BIMTechnology students, staff and faculty volunteers fromSouth Puget Sound Community College.  
+Preliminary
+STATUS:
+HFH 4BDRM
+PROJECT:HOUSE37th Ave SE Lacey Wa 98503PROJECT #:  
+  
+      
+      
+      
+      
+      
+      
+      
+REVISIONS
+# DESCRIPTION DATE 
+SHEET SCALE:
+As indicated 
+6/18/ 013 11:18:51 AM 
+SHEET TITLE:
+BUILDING
+SECTIONS
+A302 
+LIVING AREA SQ. FOOTAGE  
+LEVEL AREA 
+F.F.L. 1st FLR 846 SF 
+F.F.L. 2nd FLR 842 SF 
+DECK SQUARE FOOTAGE 
+FRONT PORCH: 84 SQUARE FEET 
+REAR PORCH: 32 SQUARE FEET 
+Ref
+1   1Ref  
+     
+  A10  1 
+     
+    ef 
+   1R  
+Sheet List  
+Sheet Number Sheet Name 
+G001 COVER SHEET 
+A101 FLOOR PLANS 
+A106 ROOF PLANS 
+A201 ELEVATI NS 
+A302 BUI DING SECTIONS 
+S101 FOUNDATION PLAN 
+S102 FLOOR FRAMING PLAN 
+S105 LATERAL PLAN 
+415 Olympia Ave NEOlympia, WA 98501(360) 956-3456 phone(360) 956-3415 fax  
+UND
+SOUTH PUGET SOCOMMUNITY COLLEGE2011 Mottman Road SWOlympia, WA 98512-6292( www.spscc.ctc.edu
+3-D Modeling / Construction Documents:These plans and details where created by CAD / BIMTechnology students, staff and faculty volunteers fromSouth Puget Sound Community College.  
+Preliminary
+STATUS:
+HFH 4BDRM
+PROJECT:HOUSE37th Ave SE Lacey Wa 98503PROJECT #:  
+  
+REVISIONS
+# DESCRIPTION DATE 
+SHEET SCALE:
+As indicated 
+6/18/ 013 11:18:53 AM 
+SHEET TITLE:
+COVER SHEET
+G001 
+ 
+ 
+     
+     
+     
+     
+     
+1' 3"  
+2'-1 1/2"  
+7"  
+  
+ 
+ 
+ 
+ 
+ 
+SILL PLATE     1' 3" 
+      
+GRADE
+2'-0"      
+ 1'-1"     
+7" 3"     
+      
+              
+ 4"  CONCRETE
+SLAB
+6' 0" 3' 0" 5' 10 3/ " 6' 0"          5' 4 3/ "   
+           6'-9"   
+              
+              
+ 10 
+36" X 24" COVERED CRAWL ACCESS 3'-0 1/4"
+4'-6 1/4"
+FOUNDATION VENTS 2/ 50
+ S.F. PER CODE
+900 S.F./ 50=6(2)=12 VENTS
+3'-5"
+7'-9 1/4"
+13'-3 1/4"
+4' 3 3/ " 6' 0 1/ " 6' 0"       1/ "
+3'-10 1/4"
+2X6 PONY W
+DBL. TOP PLA
+P.T. SOLE PL
+NOTE:
+6X6 POSTS 
+POINT LOAD
+006 BLACK PO
+7" x 15" RIBBO
+8 1/ "   10 1/ "
+4'-0"
+POR BARRI R
+. W/  #4 REBAR
+11 3/ "   
+ALL
+TE
+ATE
+@
+S
+. LY VA
+32'-0"
+N FTG
+9'              
+  5'-10 1/4"   6'-0"    5'-10 1/4"
+1'     
+       4"  CONCRETE
+SLAB
+28' 0"  4X4  P.T. POST EMBEDDED
+IN FTG. TYP.
+18" x 24" ROUND FTG. TYP.     
+              
+     6'-6"         
+              
+415 Olympia Ave NEOlympia, WA 98501360) 956-3456 phone( 360) 956-3415 fax(  
+UND
+SOUTH PUGET SOCOMMUNITY COLLEGE2011 Mottman Road SWOlympia, WA 98512-6292360) 754-7711( www.spscc.ctc.edu
+3-D Modeling / Construction Documents:These plans and details where created by CAD / BIMTechnology students, staff and faculty volunteers fromSouth Puget Sound Community College.  
+Preliminary
+STATUS:
+HFH 4BDRM
+PROJECT:HOUSE37th Ave SE Lacey Wa 98503PROJECT #:  
+  
+REVISIONS
+# DESCRIPTION DATE 
+SHEET SCALE:
+As indicated 
+6/18/ 013 11:18:54 AM 
+SHEET TITLE:
+FOUNDATION PLAN
+S101 
+ 
+   
+   
+    
+    
+    
+ 
+ 
+       
+  13' 9 1/ " 14' 2 1/ "     
+  STAGGERED BLOCKING BELOW LATERAL PANELS TYP.
+UNDER SECOND FLOOR WALLS
+11-7/ "ENGINEERED I-JOIST @16" O.C. TYP.
+3-1/ " X 8" PARALAM IN BEARI G WALL TY
+DOUBLE AND HANGER @ I TERRUPTED H
+DOUBLE JOI TS BELOW LATERAL PANELS T
+UNDER SECOND FLOOR WALLS
+STAGGERED BLOCKI G @ BEARING WALL TYP.
+13' 9 1/ " 3/ "T&G PLYWD SUB-FLOOR
+W/ LUE AND NAI S TYP.
+.
+ANGI G JOI TS
+P.
+14' 2 1/ "    
+       
+32'-0" 11-7/ " RIM BOARD
+15'-10 1/4"     12'-0 1/4"
+6'-5 1/2"
+13'-6 1/4" 
+ P
+Y      
+       
+ 16'-1 3/4"      
+ 11-7/ " RIM BOARD      
+       
+  28' 0"     
+415 Olympia Ave NEOlympia, WA 98501(360) 956-3456 phone(360) 956-3415 fax  
+UND
+SOUTH PUGET SOCOMMUNITY COLLEGE2011 Mottman Road SWOlympia, WA 98512-6292(360) 754-7711www.spscc.ctc.edu
+3-D Modeling / Construction Documents:These plans and details where created by CAD / BIMTechnology students, staff and faculty volunteers fromSouth Puget Sound Community College.  
+ Preliminary
+STATUS:
+HFH 4BDRM
+PROJECT:HOUSE37th Ave SE Lacey Wa 98503PROJECT #: 
+            
+ 14' 9" 8' 0" 5' 3"           
+ NOTE: RI  BOARD REQUI ED
+@ PORCH CONNECTIONS
+11-7/ "ENGINEERED I-JOI T @ 16" O.C.
+STAGGERED BLOCKI G @ GIRDER BEAM TYP.
+6'-0"
+4" CONCRETE S
+6' 8"   1' 6" 5' 0" 1' 6"     4'-0"   
+    LAB  4" CONCRETE SLAB
+NO
+@   3/ "T&
+W/ LUE
+TE: RI
+PORCH
+S    
+ G PLYWD SU
+ AND NAI S
+ BOARD RE
+ CONNECTI
+3
+102
+9' 10"           
+B-FLOOR
+11-7/ " RIM BOARD  TYP.
+32'-0"
+11-7/ " RIM BOARD
+QUI ED
+ONS            
+            
+ 4' 2"           
+   5' 0"  2' 4"       
+  14' 0"          
+ 28' 0"           
+REVISIONS
+# DESCRIPTION DATE 
+SHEET SCALE:
+As indicated 
+6/18/ 013 11:18:55 AM 
+SHEET TITLE:
+FLOOR FRAMING
+PLAN
+S102 
+    
+    
+     
+ 4' 2 1/ " 20' 0" 4' 2 1/ "    
+  INTERIOR LATERAL EXEMPTION
+896 S.F.   
+4'-2 1/8"     
+4'-0"     
+12'-0"     
+4'-0 1/8"     
+     
+     
+4' 2 1/ " 12' 6" 4' 0" 7' 8" 
+28' 4 1/ "    
+ 
+   
+   
+   
+   
+ 1/ " GYPSUM WALL
+BOARD MAY BE 
+  
+    
+415 Olympia Ave NEOlympia, WA 98501360) 956-3456 phone( 360) 956-3415 fax(  
+UND
+SOUTH PUGET SOCOMMUNITY COLLEGE2011 Mottman Road SWOlympia, WA 98512-6292(360) 754-7711www.spscc.ctc.edu
+3-D Modeling / Construction Documents:These plans and details where created by CAD / BIMTechnology students, staff and faculty volunteers fromSouth Puget Sound Community College.  
+Preliminary
+STATUS:
+HFH 4BDRM
+PROJECT:HOUSE37th Ave SE Lacey Wa 98503PROJECT #:  
+  
+        
+  14' 3 5/ " 14' 0 5/ "      
+  4' 2 1/ " 20  ' 0" 4' 2 1/ "    
+        
+16'-0 3/8" 4'-2 1/8"      4'-2 1/8"
+4'-0"
+16'-0" 
+ 4'-0"       
+ 12'-0"       
+        
+       4'-0" 
+ 4'-0"       
+        
+4' 2 1/ " 20 ' 0" 4' 2 1/ " 
+14' 3 5/ "  14' 0 5/ "  
+28' 4 1/ "    
+REVISIONS
+# DESCRIPTION DATE 
+SHEET SCALE:
+As indicated 
+6/18/ 013 11:18:56 AM 
+SHEET TITLE:
+LATERAL PLAN
+S105 

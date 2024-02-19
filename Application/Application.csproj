@@ -1,8 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <PackageReference Include="Aspose.3D" Version="24.1.0" />
+    <PackageReference Include="Aspose.CAD" Version="24.1.0" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="HelixToolkit" Version="2.24.0" />
+    <PackageReference Include="HelixToolkit.SharpDX.Assimp" Version="2.24.0" />
+    <PackageReference Include="HelixToolkit.SharpDX.Core" Version="2.24.0" />
+    <PackageReference Include="HelixToolkit.Wpf.SharpDX" Version="2.24.0" />
     <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="Spire.PDF" Version="10.2.2" />
   </ItemGroup>
 
   <ItemGroup>
