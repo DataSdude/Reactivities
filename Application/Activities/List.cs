@@ -28,14 +28,15 @@ using Spire.Pdf.Utilities;
 using Aspose.ThreeD.Utilities;
 using Vector3 = SharpDX.Vector3;
 using Spire.Pdf.Texts;
+using Application.Core;
 
 namespace Application.Activities
 {
     public class List
     {
-        public class Query : IRequest<List<Activity>> { }
+        public class Query : IRequest<Result<List<Activity>>> { }
   
-        public class Handler : IRequestHandler<Query, List<Activity>>
+        public class Handler : IRequestHandler<Query, Result<List<Activity>>>
         {
             private readonly DataContext _context;
 
@@ -43,10 +44,10 @@ namespace Application.Activities
             {
                 _context = context;
             }
-            public async Task<List<Activity>> Handle(Query request, CancellationToken cancellationToken)
+            public async Task<Result<List<Activity>>> Handle(Query request, CancellationToken cancellationToken)
             {
                 //CalculateMeshVolume();
-                return await _context.Activities.ToListAsync();
+                return Result<List<Activity>>.Success(await _context.Activities.ToListAsync());
             }
             
             //public double CalculateVolume(MeshGeometry3D mesh)
