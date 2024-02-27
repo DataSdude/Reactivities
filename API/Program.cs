@@ -2,6 +2,10 @@ using API.Extensions;
 using API.Middleware;
 using Application.Activities;
 using Application.Core;
+using Domain;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Persistance;
 using Persistence;
@@ -9,8 +13,15 @@ using Persistence;
 var builder = WebApplication.CreateBuilder(args);
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddControllers();
+builder.Services.AddControllers(options =>
+{
+    var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+    options.Filters.Add(new AuthorizeFilter(policy));
+
+});
 builder.Services.AddApplicationServices(builder.Configuration);
+builder.Services.AddIdentityServices(builder.Configuration);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -26,6 +37,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseCors("CorsPolicy");
 
+app.UseAuthentication();
+
 app.UseAuthorization();
 
 app.MapControllers();
@@ -33,10 +46,12 @@ app.MapControllers();
 using var scope = app.Services.CreateScope();
 var services  = scope.ServiceProvider;
 
-try { 
+try
+{
     var context = services.GetRequiredService<DataContext>();
+    var userManager = services.GetRequiredService <UserManager<AppUser>>();
     await context.Database.MigrateAsync();
-    await Seed.SeedData(context);
+    await Seed.SeedData(context, userManager);
 }
 catch(Exception ex)
 {

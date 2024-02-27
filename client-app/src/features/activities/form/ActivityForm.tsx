@@ -50,8 +50,6 @@ export default observer(function ActivityForm() {
   function handleFormSubmit(activity: Activity) {
     if (!activity.id) {
       activity.id = uuidv4();
-      console.log(activity.id);
-
       createActivity(activity).then(() =>
         navigate(`/activities/${activity.id}`)
       );
@@ -59,7 +57,6 @@ export default observer(function ActivityForm() {
       updateActivity(activity).then(() =>
         navigate(`/activities/${activity.id}`)
       );
-      console.log(JSON.stringify(activity));
     }
   }
 
