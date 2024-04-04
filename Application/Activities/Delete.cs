@@ -2,7 +2,6 @@
 using Domain;
 using MediatR;
 using Persistance;
-using SharpDX;
 
 namespace Application.Activities
 {

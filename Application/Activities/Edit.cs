@@ -4,7 +4,6 @@ using Domain;
 using FluentValidation;
 using MediatR;
 using Persistance;
-using SharpDX;
 
 namespace Application.Activities
 {
