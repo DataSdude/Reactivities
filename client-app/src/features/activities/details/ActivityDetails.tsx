@@ -33,7 +33,7 @@ export default observer(function ActivityDetails() {
         <ActivityDetailedChar />
       </GridColumn>
       <GridColumn width={6}>
-        <ActivityDetailedSidebar />
+        <ActivityDetailedSidebar activity={activity}/>
       </GridColumn>
     </Grid>
   );
