@@ -8,6 +8,7 @@ export default class ProfileStore {
   loadingProfile = false;
   uploading = false;
   loading = false;
+  updating = false;
 
   constructor() {
     makeAutoObservable(this);
@@ -91,6 +92,28 @@ export default class ProfileStore {
           );
           this.loading = false;
         }
+      });
+    } catch (error) {
+      console.log(error);
+      runInAction(() => {
+        this.loading = false;
+      });
+    }
+  };
+
+  updateProfile = async (profile: Partial<Profile>) => {
+    this.loading = true;
+    try {
+      await agent.Profiles.updateProfile(profile);
+      runInAction(() => {
+        if (
+          profile.displayName &&
+          profile.displayName !== store.userStore.user?.displayName
+        ) {
+          store.userStore.SetDisplayName(profile.displayName);
+        }
+        this.profile = { ...this.profile, ...(profile as Profile) };
+        this.loading = false;
       });
     } catch (error) {
       console.log(error);
