@@ -53,9 +53,9 @@ export default observer(function ActivityDetailedHeader({ activity }: Props) {
                 />
                 <p>{format(activity.date!, "dd MMM yyyy")}</p>
                 <p>
-                  Hosted by
+                  Hosted by {" "}
                   <strong>
-                    <Link to={`/profiles/${activity.host?.username}`}>
+                    <Link to={`/profiles/${activity.hostUsername}`}>
                       {activity.host?.displayName}
                     </Link>
                   </strong>
@@ -73,7 +73,7 @@ export default observer(function ActivityDetailedHeader({ activity }: Props) {
               floated="left"
               basic
               content={
-                activity.isCancelled ? "Re-activate Activity" : "Cacel Activity"
+                activity.isCancelled ? "Re-activate Activity" : "Cancel Activity"
               }
               onClick={cancelActivityToggle}
               loading={loading}
