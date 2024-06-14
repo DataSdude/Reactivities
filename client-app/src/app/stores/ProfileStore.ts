@@ -2,6 +2,7 @@ import { makeAutoObservable, reaction, runInAction } from "mobx";
 import { Photo, Profile } from "../models/Profile";
 import agent from "../api/agent";
 import { store } from "./store";
+import { Activity } from "../models/Activity";
 
 export default class ProfileStore {
   profile: Profile | null = null;
@@ -11,6 +12,10 @@ export default class ProfileStore {
   followings: Profile[] = [];
   loadingFollowings = false;
   activeTab = 0;
+  eventTab = 0;
+  loadingProfileActivities = false;
+  events: Partial<Activity[]> = [];
+
   constructor() {
     makeAutoObservable(this);
 
@@ -25,10 +30,34 @@ export default class ProfileStore {
         }
       }
     );
+
+    reaction(
+      () => this.eventTab,
+      (eventTab) => {
+        if (this.activeTab === 2) {
+          if (eventTab === 0) {
+            const predicate = "future";
+            this.loadProfileActivities(this.profile!.username, predicate);
+          } else if (eventTab === 1) {
+            const predicate = "past";
+            this.loadProfileActivities(this.profile!.username, predicate);
+          } else {
+            const predicate = "hosting";
+            this.loadProfileActivities(this.profile!.username, predicate);
+          }
+        } else {
+          this.events = [];
+        }
+      }
+    );
   }
 
   setActiveTab = (activeTab: number) => {
     this.activeTab = activeTab;
+  };
+
+  setEventTab = (eventTab: number) => {
+    this.eventTab = eventTab;
   };
 
   get isCurrentUser() {
@@ -196,6 +225,25 @@ export default class ProfileStore {
     } catch (error) {
       console.log(error);
       runInAction(() => (this.loadingFollowings = false));
+    }
+  };
+
+  loadProfileActivities = async (username: string, predicate: string) => {
+    this.loadingProfileActivities = true;
+    try {
+      const events = await agent.Profiles.listProfileActivities(
+        username,
+        predicate
+      );
+      runInAction(() => {
+        this.events = events;
+        this.loadingProfileActivities = false;
+      });
+    } catch (error) {
+      console.log(error);
+      runInAction(() => {
+        this.loadingProfileActivities = false;
+      });
     }
   };
 }

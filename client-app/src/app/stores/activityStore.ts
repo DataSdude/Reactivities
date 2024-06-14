@@ -1,10 +1,11 @@
-import { makeAutoObservable, runInAction } from "mobx";
+import { makeAutoObservable, reaction, runInAction } from "mobx";
 import { Activity, ActivityFormValues } from "../models/Activity";
 import agent from "../api/agent";
 import { v4 as uuidv4 } from "uuid";
 import { format } from "date-fns";
 import { store } from "./store";
 import { Profile } from "../models/Profile";
+import { Pagination, PagingParams } from "../models/Pagination";
 
 export default class ActivityStore {
   activityRegistry = new Map<string, Activity>();
@@ -12,11 +13,73 @@ export default class ActivityStore {
   editMode = false;
   loading = false;
   loadingInitial = false;
-
+  pagination: Pagination | null = null;
+  pagingParams = new PagingParams();
+  predicate = new Map().set("all", true);
   constructor() {
     makeAutoObservable(this);
+
+    reaction(
+      () => this.predicate.keys(),
+      () => {
+        this.pagingParams = new PagingParams();
+        this.activityRegistry.clear();
+        this.loadActivities();
+      }
+    );
   }
 
+  setSelectedActivity = (activity: Activity | undefined) => {
+    this.selectedActivity = activity;
+  };
+  setPagingParams = (pagingParams: PagingParams) => {
+    this.pagingParams = pagingParams;
+  };
+
+  setPredicate = (predicate: string, value: string | Date) => {
+    const resetPredicate = () => {
+      this.predicate.forEach((value, key) => {
+        if (key !== "startDate") this.predicate.delete(key);
+      });
+    };
+    switch (predicate) {
+      case "all":
+        resetPredicate();
+        this.predicate.set("all", true);
+        break;
+
+      case "isGoing":
+        resetPredicate();
+        this.predicate.set("isGoing", true);
+        break;
+
+      case "isHost":
+        resetPredicate();
+        this.predicate.set("isHost", true);
+        break;
+
+      case "startDate":
+        //resetPredicate();
+        this.predicate.delete("startDate");
+        this.predicate.set("startDate", value);
+        break;
+      default:
+        break;
+    }
+  };
+  get axiosParams() {
+    const params = new URLSearchParams();
+    params.append("pageNumber", this.pagingParams.pageNumber.toString());
+    params.append("pageSize", this.pagingParams.pageSize.toString());
+    this.predicate.forEach((value, key) => {
+      if (key === "startDate") {
+        params.append(key, (value as Date).toISOString());
+      } else {
+        params.append(key, value);
+      }
+    });
+    return params;
+  }
   get activitiesByDate() {
     return Array.from(this.activityRegistry.values()).sort(
       (a, b) => a.date!.getTime() - b.date!.getTime()
@@ -57,16 +120,16 @@ export default class ActivityStore {
   loadActivity = async (id: string) => {
     let activity = this.getActivity(id);
     if (activity) {
-      this.selectedActivity = activity;
+      this.setSelectedActivity(activity);
       return activity;
     } else {
       this.setLoadingInitial(true);
       try {
         activity = await agent.Activities.details(id);
-        runInAction(() => {
-          this.selectedActivity = activity;
-        });
         this.setActivity(activity);
+        runInAction(() => {
+          this.setSelectedActivity(activity);
+        });
         this.setLoadingInitial(false);
         return activity;
       } catch (error) {
@@ -78,17 +141,22 @@ export default class ActivityStore {
 
   loadActivities = async () => {
     this.setLoadingInitial(true);
-    this.selectedActivity = undefined;
+    this.setSelectedActivity(undefined);
     try {
-      const activities = await agent.Activities.list();
-      activities.forEach((activity) => {
+      const result = await agent.Activities.list(this.axiosParams);
+      result.data.forEach((activity) => {
         this.setActivity(activity);
       });
+      this.setPagination(result.pagination);
       this.setLoadingInitial(false);
     } catch (error) {
       console.log(error);
       this.setLoadingInitial(false);
     }
+  };
+
+  setPagination = (pagination: Pagination) => {
+    this.pagination = pagination;
   };
 
   setLoadingInitial = (state: boolean) => {
@@ -106,7 +174,7 @@ export default class ActivityStore {
       newActivity.attendees = [attendee];
       this.setActivity(newActivity);
       runInAction(() => {
-        this.selectedActivity = newActivity;
+        this.setSelectedActivity(newActivity);
       });
     } catch (error) {
       console.log(error);
@@ -123,7 +191,7 @@ export default class ActivityStore {
             ...activity,
           };
           this.activityRegistry.set(activity.id, updatedActivity as Activity);
-          this.selectedActivity = updatedActivity as Activity;
+          this.setSelectedActivity(updatedActivity as Activity);
         }
       });
     } catch (error) {
@@ -184,8 +252,13 @@ export default class ActivityStore {
       await agent.Activities.attend(this.selectedActivity!.id);
       runInAction(() => {
         this.selectedActivity!.isCancelled =
-          !this.selectedActivity?.isCancelled;
-        this.activityRegistry.set(this.selectedActivity!.id, this.selectedActivity!)
+          !this.selectedActivity!.isCancelled;
+
+        this.activityRegistry.set(
+          this.selectedActivity!.id,
+          this.selectedActivity!
+        );
+        console.log("act after desact: ", this.selectedActivity);
       });
     } catch (error) {
       console.log(error);
@@ -194,18 +267,20 @@ export default class ActivityStore {
     }
   };
 
-  clearSelectedActivity = () =>{
-    this.selectedActivity = undefined;
-  }
+  clearSelectedActivity = () => {
+    this.setSelectedActivity(undefined);
+  };
 
   updateAttendeeFollowing = (username: string) => {
-    this.activityRegistry.forEach(activity => {
-      activity.attendees.forEach( attendee => {
-        if (attendee.username === username){
-          attendee.following ? attendee.followersCount-- : attendee.followersCount++;
+    this.activityRegistry.forEach((activity) => {
+      activity.attendees.forEach((attendee) => {
+        if (attendee.username === username) {
+          attendee.following
+            ? attendee.followersCount--
+            : attendee.followersCount++;
           attendee.following = !attendee.following;
         }
-      })
-    })
-  }
+      });
+    });
+  };
 }

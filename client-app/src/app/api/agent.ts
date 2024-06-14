@@ -5,6 +5,7 @@ import { router } from "../router/Routes";
 import { store } from "../stores/store";
 import { User, UserFormValues } from "../models/user";
 import { Photo, Profile } from "../models/Profile";
+import { PaginatedResults } from "../models/Pagination";
 
 const sleep = (delay: number) => {
   return new Promise((resolve) => {
@@ -22,6 +23,14 @@ axios.interceptors.request.use((config) => {
 axios.interceptors.response.use(
   async (response) => {
     await sleep(1000);
+    const pagination = response.headers["pagination"];
+    if (pagination) {
+      response.data = new PaginatedResults(
+        response.data,
+        JSON.parse(pagination)
+      );
+      return response as AxiosResponse<PaginatedResults<unknown>>;
+    }
     return response;
   },
   (error: AxiosError) => {
@@ -76,7 +85,10 @@ const requests = {
 };
 
 const Activities = {
-  list: () => requests.get<Activity[]>("/activities"),
+  list: (params: URLSearchParams) =>
+    axios
+      .get<PaginatedResults<Activity[]>>("/activities", { params })
+      .then(responseBody),
   details: (id: string) => requests.get<Activity>(`/activities/${id}`),
   create: (activity: ActivityFormValues) =>
     requests.post<void>(`/activities`, activity),
@@ -110,6 +122,10 @@ const Profiles = {
     requests.post(`/follow/${username}`, {}),
   listFollowings: (username: string, predicate: string) =>
     requests.get<Profile[]>(`/follow/${username}?predicate=${predicate}`),
+  listProfileActivities: (username: string, predicate: string) =>
+    requests.get<Partial<Activity[]>>(
+      `/profiles/${username}/activities?predicate=${predicate}`
+    ),
 };
 
 const agent = {

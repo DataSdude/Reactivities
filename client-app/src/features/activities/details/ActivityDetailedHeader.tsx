@@ -26,6 +26,7 @@ export default observer(function ActivityDetailedHeader({ activity }: Props) {
   const {
     activityStore: { updateAttendance, loading, cancelActivityToggle },
   } = useStore();
+
   return (
     <Segment.Group>
       <Segment basic attached="top" style={{ padding: "0" }}>
@@ -53,10 +54,10 @@ export default observer(function ActivityDetailedHeader({ activity }: Props) {
                 />
                 <p>{format(activity.date!, "dd MMM yyyy")}</p>
                 <p>
-                  Hosted by {" "}
+                  Hosted by{" "}
                   <strong>
                     <Link to={`/profiles/${activity.hostUsername}`}>
-                      {activity.host?.displayName}
+                      {activity.host!.displayName}
                     </Link>
                   </strong>
                 </p>
@@ -73,7 +74,9 @@ export default observer(function ActivityDetailedHeader({ activity }: Props) {
               floated="left"
               basic
               content={
-                activity.isCancelled ? "Re-activate Activity" : "Cancel Activity"
+                activity.isCancelled
+                  ? "Re-activate Activity"
+                  : "Cancel Activity"
               }
               onClick={cancelActivityToggle}
               loading={loading}
